@@ -28,6 +28,10 @@ export default class EvomapApi {
     return this.axios.get(`${this.resourceUrl}/${username}/get-requirements`, {});
   }
 
+  getUserRecommendedContents(username) {
+    return this.axios.get(`${this.resourceUrl}/${username}/get-recommended-contents`, {});
+  }
+
   getOne(id, childResource) {
     return this.axios.get(this.singleResourceUrl(id, childResource));
   }
