@@ -20,6 +20,14 @@ export default class EvomapApi {
     return this.axios.get(this.resourceUrl, params);
   }
 
+  getUserCareerByUsername(username) {
+    return this.axios.get(`${this.resourceUrl}/${username}/get-career`, {});
+  }
+
+  getUserRequirementsByUsername(username) {
+    return this.axios.get(`${this.resourceUrl}/${username}/get-requirements`, {});
+  }
+
   getOne(id, childResource) {
     return this.axios.get(this.singleResourceUrl(id, childResource));
   }
