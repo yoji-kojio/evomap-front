@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-5">
     BADGES
     BADGES
     BADGES

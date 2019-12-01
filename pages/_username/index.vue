@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-5">
     <b-jumbotron header-level="5" :header="careerData.name" :lead="careerData.description" class="home__jumbotron mb-0" fluid />
     <b-progress :max="progressMax" height="35px" class="home__progress-bar mb-5" show-progress animated>
       <b-progress-bar :value="progressValue">
@@ -8,24 +8,14 @@
     </b-progress>
     <b-container>
       <b-row>
-        <b-col>
-          <b-card header="Finished Requirements">
-            <p class="card-text mt-2">
-              Uau! Parece que você já começou a investir na sua carreira como {{ careerData.name }}!
-              Atualmente você pode ser considerado um
-              <span class="home__user-level">{{ userCurrentLevel }}</span>
-            </p>
-            <b-list-group>
-              <b-list-group-item
-                v-for="requirement in finishedRequirements"
-                :key="requirement.id"
-              >
-                {{ requirement.name }}
-              </b-list-group-item>
-            </b-list-group>
-          </b-card>
+        <b-col cols="12" order="2" md="6" order-md="1">
+          <FinishedRequirementsCard
+            :finished-requirements-list="finishedRequirements"
+            :career-name="careerData.name"
+            :user-level="userCurrentLevel"
+          />
         </b-col>
-        <b-col>
+        <b-col cols="12" order="1" md="6" order-md="2" class="mb-3">
           <img :src="images.studySvg" class="home__image" />
         </b-col>
       </b-row>
@@ -35,6 +25,7 @@
 
 <script>
 import EvomapApi from '~/services/evomap-api.js';
+import FinishedRequirementsCard from '~/components/finished-requirements-card.vue';
 import { mapState } from 'vuex';
 import studySvg from '~/assets/svg/study.svg';
 
@@ -46,6 +37,9 @@ export default {
         studySvg,
       },
     };
+  },
+  components: {
+    FinishedRequirementsCard,
   },
   computed: {
     ...mapState('page', {
@@ -124,11 +118,6 @@ export default {
 
 .home__image {
   width: 100%;
-}
-
-.home__user-level {
-  color: #31afaf;
-  font-weight: bold;
 }
 
 </style>

@@ -1,6 +1,7 @@
 export const state = () => ({
   careerData: {},
   requirementsData: {},
+  recommendedContents: {},
 });
 
 export const mutations = {

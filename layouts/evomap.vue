@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <b-navbar toggleable="sm" type="light" variant="light">
+  <div class="mb-5">
+    <b-navbar toggleable="sm" type="light" variant="light" fixed="top">
       <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
 
       <b-navbar-brand>
@@ -12,7 +12,7 @@
         <b-navbar-nav>
           <b-nav-item :to="{name: 'username'}">Home</b-nav-item>
           <b-nav-item :to="{name: 'username-study-room'}">Study Room</b-nav-item>
-          <b-nav-item :to="{name: 'username-badges'}">Badges</b-nav-item>
+          <b-nav-item :to="{name: 'username-checklist'}">Checklist</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
