@@ -1,5 +1,5 @@
 <template>
-  <div :style="`box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8); background-image: url(${images.backgroundImage}); background-size: cover;`">
+  <div :style="`box-shadow: inset 0 0 0 100vmax rgba(0,0,0,.8); background-image: url(${images.backgroundImage}); background-size: cover;`">
     <div class="container">
       <div>
         <logo />
