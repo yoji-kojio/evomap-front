@@ -23,6 +23,10 @@ export default {
   */
   loading: { color: '#fff' },
 
+  server: {
+    port: 3050,
+  },
+
   /*
   ** Global CSS
   */

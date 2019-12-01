@@ -1,40 +1,53 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        evomap-front
-      </h1>
-      <h2 class="subtitle">
-        Evomap UI
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
+  <div :style="`box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8); background-image: url(${images.backgroundImage}); background-size: cover;`">
+    <div class="container">
+      <div>
+        <logo />
+        <h1 class="title">
+          Evomap
+        </h1>
+        <h2 class="subtitle">
+          Se aventure em sua próxima carreira
+        </h2>
+        <div class="links">
+          <a
+            href="/frontend"
+            class="button--green"
+          >
+            Frontend
+          </a>
+          <a
+            href="/backend"
+            class="button--green"
+          >
+            Backend
+          </a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
+import backgroundImage from '~/assets/cover-background.gif';
 import Logo from '~/components/Logo.vue'
 
 export default {
+  data() {
+    return {
+      images: {
+        backgroundImage,
+      },
+    };
+  },
   components: {
-    Logo
-  }
+    Logo,
+  },
 }
 </script>
 
 <style>
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -45,24 +58,31 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-size: 70px;
+  color: #3acaca;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-size: 24px;
+  color: #FFF;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
 
 .links {
   padding-top: 15px;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 100px;
+  }
+
+  .subtitle {
+    font-size: 42px;
+  }
 }
 </style>
