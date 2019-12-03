@@ -11,13 +11,13 @@
         </h2>
         <div class="links">
           <a
-            href="/yoji.kojio"
+            href="/yojikojio"
             class="button--green"
           >
             Frontend
           </a>
           <a
-            href="/kazu.kojio"
+            href="/kazukojio"
             class="button--green"
           >
             Backend

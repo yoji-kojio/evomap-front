@@ -10,8 +10,8 @@
 
       <b-collapse id="nav-text-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item :to="{name: 'username'}">Home</b-nav-item>
-          <b-nav-item :to="{name: 'username-study-room'}">Study Room</b-nav-item>
+          <b-nav-item :to="{name: 'username'}">Minha carreira</b-nav-item>
+          <b-nav-item :to="{name: 'username-study-room'}">Sala de Estudos</b-nav-item>
           <b-nav-item :to="{name: 'username-checklist'}">Checklist</b-nav-item>
         </b-navbar-nav>
       </b-collapse>

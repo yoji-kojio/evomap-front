@@ -6,7 +6,7 @@
         Your progress: <strong>{{ progressValue.toFixed(2) }} / {{ progressMax }}</strong>
       </b-progress-bar>
     </b-progress>
-    <div class="container">
+    <b-container>
       <b-row align-h="between">
         <b-card
           v-for="(content, index) in recommendedContents"
@@ -26,7 +26,7 @@
           <b-button href="#" class="study-room__button">Acessar</b-button>
         </b-card>
       </b-row>
-    </div>
+    </b-container>
   </div>
 </template>
 

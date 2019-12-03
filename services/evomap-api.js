@@ -32,6 +32,10 @@ export default class EvomapApi {
     return this.axios.get(`${this.resourceUrl}/${username}/get-recommended-contents`, {});
   }
 
+  finishRequirement(userRequirementId) {
+    return this.axios.get(`http://localhost:3000/api/v1/user_requirements/${userRequirementId}/finish-requirement`, {});
+  }
+
   getOne(id, childResource) {
     return this.axios.get(this.singleResourceUrl(id, childResource));
   }
