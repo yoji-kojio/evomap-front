@@ -1,6 +1,10 @@
 <template>
   <div class="pt-5">
-    <b-jumbotron header-level="5" :header="careerData.name" lead="Sala de Estudos" class="study-room__jumbotron mb-0" fluid />
+    <PageHeader
+      :career-name="careerData.name"
+      :progress="progressValue"
+      description="Sala de Estudos"
+    />
     <b-progress :max="progressMax" height="35px" class="study-room__progress-bar mb-5" show-progress animated>
       <b-progress-bar :value="progressValue">
         Your progress: <strong>{{ progressValue.toFixed(2) }} / {{ progressMax }}</strong>
@@ -32,10 +36,14 @@
 
 <script>
 import EvomapApi from '~/services/evomap-api.js';
+import PageHeader from '~/components/page-header.vue';
 import { mapState } from 'vuex';
 
 export default {
   layout: 'evomap',
+  components: {
+    PageHeader,
+  },
   computed: {
     ...mapState('page', {
       careerData: state => state.careerData,

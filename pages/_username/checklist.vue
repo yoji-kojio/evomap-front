@@ -1,6 +1,10 @@
 <template>
   <div class="pt-5">
-    <b-jumbotron header-level="5" :header="careerData.name" lead="Checklist! Anote tudo o que você aprendeu" class="study-room__jumbotron mb-0" fluid />
+    <PageHeader
+      :career-name="careerData.name"
+      :progress="progressValue"
+      description="Checklist! Anote todo as habilidades que você domina!"
+    />
     <b-progress :max="progressMax" height="35px" class="study-room__progress-bar mb-5" show-progress animated>
       <b-progress-bar :value="progressValue">
         Your progress: <strong>{{ progressValue.toFixed(2) }} / {{ progressMax }}</strong>
@@ -45,6 +49,7 @@
 
 <script>
 import EvomapApi from '~/services/evomap-api.js';
+import PageHeader from '~/components/page-header.vue';
 import axios from 'axios'
 import { mapState } from 'vuex';
 import completedSvg from '~/assets/svg/completed.svg';
@@ -58,6 +63,9 @@ export default {
       },
       username: this.$route.params.username,
     };
+  },
+  components: {
+    PageHeader,
   },
   computed: {
     ...mapState('page', {
