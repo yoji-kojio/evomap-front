@@ -27,7 +27,7 @@
             Este curso ensina o básico sobre Curso Exemplo
           </b-card-text>
 
-          <b-button href="#" class="study-room__button">Acessar</b-button>
+          <b-button :href="content.url" target="_blank" class="study-room__button">Acessar</b-button>
         </b-card>
       </b-row>
     </b-container>
