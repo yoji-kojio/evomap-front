@@ -1,10 +1,10 @@
 <template>
   <b-card
     v-if="finishedRequirementsList && finishedRequirementsList.length"
-    header="Finished Requirements"
+    header="Habilidades concluídas"
   >
     <p class="card-text mt-2">
-      Uau! Parece que você já começou a investir na sua carreira como {{ careerName }}!
+      <strong>Uau!</strong> Parece que você já começou a investir na sua carreira como {{ careerName }}!
       Atualmente você pode ser considerado um
       <span class="home__featured-text">{{ userLevel }}</span>
     </p>
